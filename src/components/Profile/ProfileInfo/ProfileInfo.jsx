@@ -5,6 +5,7 @@ import React from 'react'
 import s from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
 import userPhoto from "../../../assets/images/115-1150152_default-profile-picture-avatar-png-green.png";
+import ProfileStatus from "./ProfileStatus";
 
 const ProfileInfo = (props) => {
 
@@ -13,20 +14,17 @@ const ProfileInfo = (props) => {
     }
     return (
         <div>
+{/*
             <div>
                 <img src="https://cdn.wallpapersafari.com/72/22/eJpjwf.jpg"/>
             </div>
+*/}
 
             <div className={s.descriptionBlock}>
                 <div>пользователь №{props.profile.userId}</div>
                 <img src={ props.profile.photos.large !=null ? props.profile.photos.large : userPhoto}/>
-                {/*<img src={u.photos.small != null ? u.photos.small : userPhoto}
-                     className={s.userPhoto}/>*/}
-                <div>{props.profile.fullName}</div>
-                <div>статус "{props.profile.aboutMe}"</div>
                 <div> описание "{props.profile.lookingForAJobDescription}"</div>
-
-
+                <ProfileStatus status={"hello"}/>
             </div>
         </div>
     )
