@@ -14,17 +14,17 @@ const ProfileInfo = (props) => {
     }
     return (
         <div>
-{/*
+
             <div>
-                <img src="https://cdn.wallpapersafari.com/72/22/eJpjwf.jpg"/>
+                <img src="http://extendthemes.com/demos/mesmerize-pro-business/wp-content/uploads/sites/20/2018/02/cropped-bizz-inside-header-bg.jpg"/>
             </div>
-*/}
+
 
             <div className={s.descriptionBlock}>
                 <div>пользователь №{props.profile.userId}</div>
                 <img src={ props.profile.photos.large !=null ? props.profile.photos.large : userPhoto}/>
                 <div> описание "{props.profile.lookingForAJobDescription}"</div>
-                <ProfileStatus status={"hello"}/>
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
             </div>
         </div>
     )

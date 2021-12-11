@@ -62,7 +62,7 @@ let store = {
 
      this._state.profilePage = profileuseReducer(this._state.profilePage, action);
      this._state.dialogsPage = dialoguseReducer(this._state.dialogsPage, action);
-      this._callSubscriber(this._state);
+     this._callSubscriber(this._state);
   
   }
 
